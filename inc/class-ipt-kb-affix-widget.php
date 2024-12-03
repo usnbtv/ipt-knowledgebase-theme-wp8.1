@@ -309,6 +309,8 @@ class IPT_KB_Affix_Widget extends WP_Widget {
 	}
 }
 
+add_action( 'widgets_init', create_function( '', "register_widget( 'IPT_KB_Affix_Widget' );" ) );
+
 /**
  * TOC content filter
  *
@@ -368,4 +370,5 @@ function ipt_kb_toc_preg_callback( $matches ) {
 
 	return $return;
 }
+
 
